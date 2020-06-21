@@ -285,14 +285,17 @@ section#love-msg {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #c299fc;
+    background-color: #6807f9;
     height: 100vh;
     width: 50%;
-    opacity: 0.9;
+    opacity: 1;
     transform: translateX(-500px);
     transition: transform 0.5s ease-in-out;
+    border-right-style: 2px solid black;
+    box-shadow: 2px 2px 20px black;
   }
   .main-menu a {
+    color: black;
     padding-left: 15px;
     border-bottom-style: solid;
     border-bottom: medium;
@@ -300,7 +303,7 @@ section#love-msg {
 }
 
 .show {
-  transform: translateX(-20px);
+  transform: translateX(-10px);
 }
 
 .navbar {
@@ -310,7 +313,7 @@ section#love-msg {
   flex-direction: row;
   justify-content: space-between;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
-  padding: 0 30px;
+  padding: 0 10px;
 }
 
 .navbar .logo-div {
@@ -318,13 +321,11 @@ section#love-msg {
   justify-content: center;
   align-items: center;
   line-height: 0px;
-  margin-right: auto;
-  margin-left: 30px;
 }
 
 .navbar .logo {
   width: 60px;
-  margin-right: 30px;
+  margin-right: 10px;
 }
 
 .navbar .main-menu {
@@ -409,12 +410,16 @@ section#love-msg {
 
 .hamburger {
   background-color: #6807f9;
-  padding: 4px 7px;
-  border-radius: 20%;
-  box-shadow: 0px 10px 20px #6807f9;
+  box-shadow: 2px 2px 20px #0c0c0c;
   border-style: none;
-  color: #f3f3f3;
+  color: #0c0c0c;
   display: none;
+  background-color: #f3f3f3;
+  margin: 0px 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  outline: none;
 }
 
 @media (max-width: 920px) {
