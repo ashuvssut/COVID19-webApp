@@ -1,0 +1,11 @@
+section{
+    &#navbar{
+        background-color: $light-blue;
+        height: $navbar-height;
+        min-height: 70px;
+        @include flex-center();
+    }
+    &#love-msg{
+        height: 30px;
+    }
+}
