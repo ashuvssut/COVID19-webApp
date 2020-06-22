@@ -472,7 +472,7 @@ section#love-msg {
 
 .search-container .search-bar #search-input {
   border-style: none;
-  height: 42px;
+  height: 52px;
   width: 70vw;
   padding: 0px 90px 0px 30px;
   border-radius: 45px;
@@ -488,10 +488,9 @@ section#love-msg {
   position: absolute;
   border-style: none;
   right: 0px;
-  height: 42px;
+  height: 52px;
   width: 80px;
-  border-start-end-radius: 45px;
-  border-end-end-radius: 45px;
+  border-radius: 0px 45px 45px 0px;
 }
 
 .search-container .search-bar .search-button:hover {
@@ -500,7 +499,7 @@ section#love-msg {
 
 .search-container .search-filter {
   position: absolute;
-  top: 20px;
+  top: 22px;
   z-index: -1;
   background-color: white;
   height: 0px;
@@ -508,12 +507,34 @@ section#love-msg {
   overflow-y: auto;
   overflow-x: hidden;
   transition: ease-out 0.1s;
-  border-end-start-radius: 5px;
-  border-end-end-radius: 5px;
 }
 
 .search-container .expand-filter {
   transition: ease-in 0.2s;
   height: 200px;
+}
+
+.search-container .filter-table {
+  margin-top: 25px;
+  color: black;
+  min-width: 70vw;
+  font-size: 1.3em;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.search-container .filter-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.search-container .filter-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.search-container .filter-table tbody tr:hover {
+  box-shadow: 0 0 10px black;
+}
+
+.search-container .filter-table td {
+  padding: 12px 35px;
 }
 /*# sourceMappingURL=app.css.map */
