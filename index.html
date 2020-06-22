@@ -20,8 +20,8 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
         
         <!--js scripts-->
-        <!-- <script src="assets/js/.js"></script> -->
-        <script src="assets/js/sidebar.js"></script>
+        <script src="assets/js/filter.js"></script>
+        <script src="assets/js/toggler.js"></script>
         <!-- <script src="assets/js/.js"></script> -->
         
     </head>
@@ -44,12 +44,37 @@
             </nav>
         </section>
         
-        <section id="love-msg">
+        <section id="search-bar">
+            <div class="container search-container">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Country name or Country code..." onkeyup="toggleFilter()">
+                    <button class="search-button" type="submit"><i class="fas fa-search" aria-hidden="true"></i></button>
+                    <div class="search-filter">
+                        <table class="filter-table">
+    
+                        </table class="filter-table">
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+
+
+
+
+
+
+
+
+
+
+        <!-- <section id="love-msg">
             <h3 >
                 Made with 
                 <i class="far fa-heart" ></i> 
                 from India.
             </h3>
-        </section>
+        </section> -->
     </body>
 </html>

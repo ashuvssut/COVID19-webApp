@@ -1,5 +1,6 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-
+//Change log : 
+// - changes in line 136
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -133,7 +134,7 @@ input,
 optgroup,
 select,
 textarea {
-  color: inherit;
+  //color: inherit;
   font: inherit;
   margin: 0;
 }
