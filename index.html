@@ -47,8 +47,8 @@
         <section id="search-bar">
             <div class="container filter-search-container">
                 <div class="search-bar">
-                    <form class="search-form" action="/" method="post" enctype="text/plain">   <!--'/' represents 'root' route. (required when get request is called upon root route) -->
-                        <input type="text" id="search-input" placeholder="Country name or Country code..." onkeyup="toggleFilter(); filterList();">
+                    <form class="search-form" action="/" method="post">   <!--'/' represents 'root' route. (required when get request is called upon root route) -->
+                        <input type="text" id="search-input" name="searchInput" placeholder="Country name or Country code..." onkeyup="toggleFilter(); filterList();">
                         <button class="search-button" type="submit">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </button>

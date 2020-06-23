@@ -3,7 +3,7 @@
 let countryArray = [];
 
 catchCountryData()
-    .then(() => console.log('Data fetched successfully!'))
+    .then(() => console.log('countryData fetched successfully!'))
     .catch(error => {
         console.log('error!');
         console.error(error)

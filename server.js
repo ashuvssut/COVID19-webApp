@@ -1,9 +1,12 @@
 const express = require('express');
 const https = require('https');//to send a get req from our server to the api server
+const bodyParser = require('body-parser'); //allows to look through the body of post requests
 
 const app = express();//initialized app as an express app
+app.use(bodyParser.urlencoded({extended:true})); //code necessary to start parsing
+app.use("/public", express.static(__dirname + "/public"));
 
-let RequestedCountryCode = null;
+let requestedCountryCode = null;
 let newConfirmed = null;
 let totalConfirmed = null;
 let newDeaths = null;
@@ -11,14 +14,16 @@ let totalDeaths = null;
 let newRecovered = null;
 let totalRecovered = null; 
 
-app.get("/", (req, res) => {
+app.post("/", (req, res) => {
+    let selectedCountry = req.body.searchInput;
+    ltBraceIndex = selectedCountry.indexOf('(');
+    requestedCountryCode = selectedCountry.slice(ltBraceIndex+1, ltBraceIndex+3)
 
+    //Get Covid details
     const covidUrl = "https://api.covid19api.com/summary"
-    https.get(covidUrl, (response) => {
-        //console.log(response.headers);
+    https.get(covidUrl, (response) => {    
         
-        //since this api call returns a very large set. we need to get it in chunks
-        let chunks = [];
+        let chunks = []; //since this api call returns a very large set. we need to get it in chunks
         response
             .on('data', (chunk)=>{//'data' events can be fired multiple times, so you have to collect all the data values and concatenate them together when the 'end' event has fires
                 chunks.push(chunk);
@@ -28,7 +33,7 @@ app.get("/", (req, res) => {
                 let data = Buffer.concat(chunks);
                 let covidData = JSON.parse(data)  //data is stored in countiesData (which is an object 
                 covidData.Countries.forEach(Object => {
-                    if(Object.CountryCode === RequestedCountryCode){
+                    if(Object.CountryCode === requestedCountryCode){
                         newConfirmed = Object.NewConfirmed;
                         newDeaths = Object.NewDeaths;
                         newRecovered = Object.NewRecovered;
@@ -41,10 +46,13 @@ app.get("/", (req, res) => {
             .on("error", (error) => { //'error' catches the error and passes to the function)
                 console.error(error);
             });
-            console.log(newConfirmed);
-            
+        
+        console.log(newConfirmed);    
     })
-    res.send("hey")
+});
+app.get("/", (req, res) => {
+
+    res.sendFile(__dirname + "/index.html");    
 })
 
 
@@ -52,13 +60,3 @@ app.get("/", (req, res) => {
 
 
 app.listen(3000, () => console.log(" server is running on port 3000"))
-
-// app.use("/public", express.static(__dirname + "/public"))
-
-// app.get("/", (req, res) => {
-//   res.sendFile(__dirname + "/index.html");
-// })
-
-// app.listen(1337, () => {
-//   console.log("The server is up and running!");
-// });
