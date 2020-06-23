@@ -8,10 +8,13 @@ function toggleSidebar(){
 
 //show filter-div when input is given to search-bar
 function toggleFilter(){
-     const filterDiv = document.querySelector('.search-filter');
+     const filterDiv = document.querySelector('.filter');
+     const filterContainer = document.querySelector('.filter-container')
      if(document.getElementById('search-input').value){
-          filterDiv.classList.add('expand-filter')
+          filterContainer.style.visibility= "visible";
+          filterDiv.classList.add('expand-filter');
      }else{
-          filterDiv.classList.remove('expand-filter')      
+          filterContainer.style.visibility= "hidden";
+          filterDiv.classList.remove('expand-filter');   
      }
 }

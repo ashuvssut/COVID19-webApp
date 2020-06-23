@@ -1,4 +1,4 @@
-.search-container{
+.filter-search-container{
     @include flex-center();
 
     .search-bar{
@@ -32,40 +32,50 @@
         }
     }
 
-    .search-filter{
+    .filter-container{
         position: absolute;
         top: 22px;
-        z-index: -1;
-        background-color: white;
-        height: 0px;
+        z-index: -1; 
+        background-color: #f3f3f3;
+        height: fit-content;
         width: 70vw;
-        overflow-y: auto;
-        overflow-x: hidden;
+        visibility: hidden;        
         transition: ease-out 0.1s;
-    }
-    .expand-filter{
-        transition: ease-in 0.2s;
-        height: 200px;
-    }
-    .filter-table{
-        margin-top: 25px;
-        color: black;
-        min-width:70vw;
-        font-size: 1.3em;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-
-        tbody tr{
-            border-bottom: 1px solid #dddddd ;
-            &:nth-of-type(even){
-                background-color: $white;
-            }
-            &:hover{
-                box-shadow: 0 0 10px rgb(0, 0, 0 );
-            }
-        }
         
-        td{
-            padding: 12px 35px;
+        .filter{
+            margin-top: 35px;
+            background-color: white;
+            height: 0px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            
+            .filter-table{
+                
+                color: black;
+                min-width:70vw;
+                font-size: 1.3em;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        
+                tr{
+                    border-bottom: 1px solid #dddddd ;
+                    &:nth-of-type(even){
+                        background-color: $white;
+                    }
+                    &:hover{
+                        box-shadow: 0 0 10px rgb(0, 0, 0 );
+                    }
+                }
+                
+                td{
+                    padding: 12px 35px;
+                }
+            }
+        }
+        .expand-filter{
+            transition: ease-in 0.2s;
+            height: 200px;
         }
     }
+    
+    
 }
