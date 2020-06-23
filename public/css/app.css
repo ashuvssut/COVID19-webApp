@@ -483,6 +483,10 @@ section#love-msg {
   box-shadow: 2px 2px 10px #463b3b;
 }
 
+.filter-search-container .search-bar #search-input::selection {
+  background-color: #b6b6b6;
+}
+
 .filter-search-container .search-bar .search-button {
   background-color: #f3f3f3;
   color: #0c0c0c;
@@ -528,6 +532,7 @@ section#love-msg {
 
 .filter-search-container .filter-container .filter .filter-table tr {
   border-bottom: 1px solid #dddddd;
+  cursor: pointer;
 }
 
 .filter-search-container .filter-container .filter .filter-table tr:nth-of-type(even) {

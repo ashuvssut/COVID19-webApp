@@ -11,9 +11,11 @@
             width: 70vw;
             padding: 0px 90px 0px 30px;
             border-radius: 45px;
-
             &:hover{
                 box-shadow: 2px 2px 10px rgb(70, 59, 59);
+            }
+            &::selection{
+                background-color: $greyish-white;
             }
         }
         
@@ -60,6 +62,7 @@
         
                 tr{
                     border-bottom: 1px solid #dddddd ;
+                    cursor: pointer;
                     &:nth-of-type(even){
                         background-color: $white;
                     }

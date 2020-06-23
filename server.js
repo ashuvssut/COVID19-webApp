@@ -1,11 +1,9 @@
-
-// const _filter = require("./assets/js/filter.js");
 const express = require('express');
 const https = require('https');//to send a get req from our server to the api server
 
 const app = express();//initialized app as an express app
 
-let RequestedCountryCode = 'IN';
+let RequestedCountryCode = null;
 let newConfirmed = null;
 let totalConfirmed = null;
 let newDeaths = null;
@@ -13,51 +11,7 @@ let totalDeaths = null;
 let newRecovered = null;
 let totalRecovered = null; 
 
-class CountryName{
-    constructor(CountryName, CountryCode){
-        this.CountryName= CountryName;
-        this.CountryCode= CountryCode;
-    }
-}
-let countryArray = [];
-
 app.get("/", (req, res) => {
-
-    const countryUrl = "https://api.covid19api.com/countries"
-    https.get(countryUrl, (response) => {
-        //console.log(response.headers);
-        
-        //since this api call returns a very large set. we need to get it in chunks
-        let chunks = [];
-        response
-            .on('data', (chunk)=>{//'data' events can be fired multiple times, so you have to collect all the data values and concatenate them together when the 'end' event has fires
-                chunks.push(chunk);
-                //console.log(response.statusCode);
-            })
-            .on('end', ()=>{
-                let countryData = Buffer.concat(chunks);
-                countryArray = JSON.parse(countryData);
-                
-                _filter.generateFilterTable(countryArray);
-                // const filterTable = document.querySelector('.filter-table');
-
-                // countryArray.forEach(Object => {
-                //     let tr = document.createElement('tr');
-
-                //     let td1 = document.createElement('td');
-                //     td1.textContent = Object.Country;
-
-                //     let td2 = document.createElement('td');
-                //     td2.textContent = Object.ISO2;
-
-                //     tr.appendChild(td1);
-                //     tr.appendChild(td2);
-
-                //     filterTable.appendChild(tr);
-                // });                  
-            })
-            .on('error', (error)=> console.error(error))
-    });     
 
     const covidUrl = "https://api.covid19api.com/summary"
     https.get(covidUrl, (response) => {
@@ -98,3 +52,13 @@ app.get("/", (req, res) => {
 
 
 app.listen(3000, () => console.log(" server is running on port 3000"))
+
+// app.use("/public", express.static(__dirname + "/public"))
+
+// app.get("/", (req, res) => {
+//   res.sendFile(__dirname + "/index.html");
+// })
+
+// app.listen(1337, () => {
+//   console.log("The server is up and running!");
+// });

@@ -9,8 +9,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Coronalytics</title>
         
-        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-        <link rel="stylesheet" href="assets/css/app.min.css">
+        <link rel="shortcut icon" href="public/img/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="public/css/app.min.css">
 
         <!--Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -20,16 +20,16 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
         
         <!--js scripts-->
-        <script src="assets/js/filter.js"></script>
-        <script src="assets/js/toggler.js"></script>
-        <script src="assets/js/onclick.js"></script>
+        <script src="public/js/filter.js"></script>
+        <script src="public/js/toggler.js"></script>
+        <script src="public/js/onclick.js"></script>
         
     </head>
     <body>
         <section id="navbar" >
             <nav class="navbar container" >
                 <div class="logo-div">
-                    <img class="logo"src="assets/img/corona.png" alt="morse_logo" >
+                    <img class="logo"src="public/img/corona.png" alt="morse_logo" >
                     <h1 class="title">Coronalytics</h1>
                 </div>
                 <ul class="main-menu" id="main-menu">
@@ -47,10 +47,12 @@
         <section id="search-bar">
             <div class="container filter-search-container">
                 <div class="search-bar">
-                    <input type="text" id="search-input" placeholder="Country name or Country code..." onkeyup="toggleFilter(); filterList();">
-                    <button class="search-button" type="submit">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                    </button>
+                    <form class="search-form" action="/" method="post" enctype="text/plain">   <!--'/' represents 'root' route. (required when get request is called upon root route) -->
+                        <input type="text" id="search-input" placeholder="Country name or Country code..." onkeyup="toggleFilter(); filterList();">
+                        <button class="search-button" type="submit">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
                     <div class="filter-container">
                         <div class="filter">
                             <table class="filter-table">
@@ -58,8 +60,7 @@
                             </table>
                         </div>
                     </div>
-                </div>
-                
+                </div>  
             </div>
         </section>
         
