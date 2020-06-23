@@ -16,6 +16,7 @@ async function catchCountryData(){//refer https://www.youtube.com/watch?v=tc8DU1
     //console.log(countryArray);
     generateFilterTable(countryArray);
     sortTableByColumn(document.querySelector('table'), 0, true);
+    addRowEventListener();
 }
 
 function generateFilterTable(countryArray){
@@ -88,7 +89,7 @@ function filterList(){
 
     const Rows = document.querySelectorAll('tr');
 
-    Rows.forEach((tr, index) => {
+    Rows.forEach( tr => {
         const td1Text = tr.querySelectorAll('td')[0].textContent.toLowerCase();
         const td2Text = tr.querySelectorAll('td')[1].textContent.toLowerCase();
 
@@ -99,5 +100,4 @@ function filterList(){
             tr.style.display = "none";
         }
     });
-
 }
