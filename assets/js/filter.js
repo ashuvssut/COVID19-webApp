@@ -1,6 +1,5 @@
 //generate filter table from the data retrieved from https://api.covid19api.com/countries
-    // exports.__esModule = true;
-    // exports.generateFilterTable = generateFilterTable
+    
 let countryArray = [];
 
 catchCountryData()
@@ -80,4 +79,25 @@ function sortTableByColumn(table, column, asc = true) {
 
     // Re-add the newly sorted rows that are stored in sortedRows array
     table.append(...sortedRows);
+}
+
+
+//FILTER-LIST FUNCTION
+function filterList(){
+    const searchInput = document.querySelector('#search-input').value.toLowerCase();
+
+    const Rows = document.querySelectorAll('tr');
+
+    Rows.forEach((tr, index) => {
+        const td1Text = tr.querySelectorAll('td')[0].textContent.toLowerCase();
+        const td2Text = tr.querySelectorAll('td')[1].textContent.toLowerCase();
+
+        if(td1Text.indexOf(searchInput) > -1 || td2Text.indexOf(searchInput) > -1){//if searchInput string is found in td1Text then in indexOf() returns some positive value else it returns -1
+            tr.style.display = "";
+        }
+        else{
+            tr.style.display = "none";
+        }
+    });
+
 }

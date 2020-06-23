@@ -41,6 +41,7 @@
         width: 70vw;
         visibility: hidden;        
         transition: ease-out 0.1s;
+        border-radius: 5px;
         
         .filter{
             margin-top: 35px;
@@ -48,6 +49,7 @@
             height: 0px;
             overflow-y: auto;
             overflow-x: hidden;
+            border-radius: 5px;
             
             .filter-table{
                 
@@ -71,7 +73,8 @@
                 }
             }
         }
-        .expand-filter{
+        .expand-filter{ //this class is meant to be appended to the div tag with .filter class
+                        //put this css here only (just-under .filter class css). Do not place this CSS elsewhere.
             transition: ease-in 0.2s;
             height: 200px;
         }

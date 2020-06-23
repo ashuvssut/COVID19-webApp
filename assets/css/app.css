@@ -507,6 +507,7 @@ section#love-msg {
   width: 70vw;
   visibility: hidden;
   transition: ease-out 0.1s;
+  border-radius: 5px;
 }
 
 .filter-search-container .filter-container .filter {
@@ -515,6 +516,7 @@ section#love-msg {
   height: 0px;
   overflow-y: auto;
   overflow-x: hidden;
+  border-radius: 5px;
 }
 
 .filter-search-container .filter-container .filter .filter-table {
