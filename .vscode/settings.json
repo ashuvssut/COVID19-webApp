@@ -1,3 +1,5 @@
 {
-    "liveServer.settings.multiRootWorkspaceName": "COVID19-webApp"
+    "liveServer.settings.multiRootWorkspaceName": "COVID19-webApp",
+
+    "liveSassCompile.settings.showOutputWindow": false,
 }
