@@ -1,6 +1,7 @@
 const express = require('express');
 const https = require('https');//to send a get req from our server to the api server
 const bodyParser = require('body-parser'); //allows to look through the body of post requests
+const { send } = require('process');
 
 const app = express();//initialized app as an express app
 app.use(bodyParser.urlencoded({extended:true})); //code necessary to start parsing
@@ -40,6 +41,8 @@ app.post("/", (req, res) => {
                         totalConfirmed = Object.TotalConfirmed;
                         totalDeaths = Object.TotalDeaths;
                         totalRecovered = Object.TotalRecovered;
+                        console.log(newConfirmed); 
+                        send(newConfirmed)
                     }
                 });
             })
@@ -47,7 +50,8 @@ app.post("/", (req, res) => {
                 console.error(error);
             });
         
-        console.log(newConfirmed);    
+         
+        
     })
 });
 app.get("/", (req, res) => {
@@ -59,4 +63,4 @@ app.get("/", (req, res) => {
 
 
 
-app.listen(3000, () => console.log(" server is running on port 3000"))
+app.listen(3000, () => console.log(" server is listening on port 3000"))
