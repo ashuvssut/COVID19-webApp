@@ -54,7 +54,7 @@ function sortTableByColumn(table, column, asc = true) {
         //</tr>
     const sortedRows = rows.sort((aRow, bRow) => {
         const aRowColText = aRow.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();//The trim() method returns the string stripped of whitespace from both ends. this is not required but still it is done to prevent potential errors
-        //column  + 1 is done. its because we want to select the {column+1)th-child of the <td>s inside <tr>. child counting starts from 1, thats why we did column+1
+        //column + 1 is done. its because we want to select the {column+1)th-child of the <td>s inside <tr>. child counting starts from 1, thats why we did column+1
         const bRowColText = bRow.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
 
         return aRowColText > bRowColText ? (1 * dirModifier) : (-1 * dirModifier);
