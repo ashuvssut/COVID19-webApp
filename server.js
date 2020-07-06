@@ -25,7 +25,7 @@ app.post('/location', (req, res) => {//  '/location is the route for getting loc
 
 
 app.post('/reqCovidDetails', async (req, res) => {
-    console.log('server got a request on route "/getCovidDetails"!');
+    console.log('server got a request on route "/reqCovidDetails"!');
     const requestedCountryCode = req.body.requestedCountryCode;
 
     //Get Covid details
