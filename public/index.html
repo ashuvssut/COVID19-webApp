@@ -53,7 +53,7 @@
                             type="text" 
                             id="search-input" 
                             name="searchInput" 
-                            pattern="\w+\s\([A-Z]{2}\)" 
+                            pattern="(\w+\s)+\([A-Z]{2}\)[\s]+" 
                             title="FORMAT: '<Country Name> <space> <(> <COUNTRY CODE> <)>'" 
                             placeholder="Country name or Country code..." 
                             onkeyup="toggleFilter(); filterList();"

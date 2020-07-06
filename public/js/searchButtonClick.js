@@ -6,7 +6,7 @@ searchForm.addEventListener('submit', async event => {
     const ltBraceIndex = selectedCountry.indexOf('(');
     const requestedCountryCode = selectedCountry.slice(ltBraceIndex+1, ltBraceIndex+3);
 
-    const data = {};
+    const data = {requestedCountryCode};
 
     //reqCovidDetails for the requestedCountryCode
     const options = {
