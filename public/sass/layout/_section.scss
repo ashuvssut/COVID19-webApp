@@ -1,11 +1,68 @@
-section{
-    &#navbar{
+section {
+    &#navbar {
         background-color: $light-blue;
         height: $navbar-height;
         min-height: 92px;
         @include flex-center();
     }
-    &#love-msg{
+    &#results {
+        position: relative;
+        z-index: -100;
+        width: 100%;
+        min-height: 350px ;
+        margin-top: 60px;
+        .results-container {
+            margin: 0 auto;
+            @include flex-center();
+            flex-direction: column;
+            width: 85%;
+            .results-headers {
+                width: 100%;
+                text-align: center;
+                box-shadow: 0 2px 5px $black;
+                padding: 0px 5px 20px;
+                border-radius: 5px;
+            }
+            .results-body {
+                margin: 30px 10px 0;
+                display: grid;
+                gap: 0.3rem;
+                @media (min-width: 360px) {
+                    grid-template-columns: 130px 200px;
+                }
+
+                .confirmed,
+                .deaths,
+                .recovered {
+                    background-color: rgb(117, 117, 117);
+                    padding: 10px;
+                    text-align: center;
+                    border-radius: 3px;
+                    @include flex-center();
+                    flex-direction: column;
+                    h2 {
+                        margin: 10px 15px;
+                    }
+                    p {
+                        color: $black;
+                        span {
+                            color: $white;
+                        }
+                    }
+                }
+                .confirmed {
+                    grid-row: 1 / 3;
+                }
+            }
+        }
+        .hide {
+            display: none;
+            z-index: -100;
+        }
+    }
+
+    &#love-msg {
+        margin-top: 30px;
         height: 30px;
     }
 }

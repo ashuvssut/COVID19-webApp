@@ -113,7 +113,7 @@ function addRowEventListener(){
             console.log(event);
             const td1Text = row.firstElementChild.textContent;
             const td2Text = row.querySelectorAll('td')[1].textContent;
-            searchInput.value = `${td1Text} (${td2Text}) `
+            searchInput.value = `${td1Text} (${td2Text})`
         })
     });
 }

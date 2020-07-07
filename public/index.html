@@ -48,20 +48,17 @@
         <section id="search-bar">
             <div class="container filter-search-container">
                 <div class="search-bar">
-                    <form class="search-form">   <!--'/' represents 'root' route. (required when get request is called upon root route) -->
+                    <form class="search-form">
                         <input 
                             type="text" 
                             id="search-input" 
                             name="searchInput" 
-                            pattern="(\w+\s)+\([A-Z]{2}\)[\s]+" 
+                            pattern="(\w+\s)+\([A-Z]{2}\)([\s]?)+" 
                             title="FORMAT: '<Country Name> <space> <(> <COUNTRY CODE> <)>'" 
                             placeholder="Country name or Country code..." 
                             onkeyup="toggleFilter(); filterList();"
                         >
-                        <button 
-                            class="search-button" 
-                            type="submit"
-                        >
+                        <button class="search-button" type="submit">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </button>
                     </form>
@@ -75,16 +72,39 @@
                 </div>  
             </div>
         </section>
+        <section id="results" class="hide">
+            <div class="results-container hide">
+                <div class="results-headers">
+                    <h1 class="country-name"></h1>
+                    <h3>Last Updated: <span class="date"></span></h3>
+                </div>
+
+                <div class="results-body">
+                    <div class="confirmed">
+                        <h2>Confirmed Cases</h2>
+                        <p>New: <span class="new-confirmed"></span></p> 
+                        <p>Total: <span class="total-confirmed"></span></p>
+                    </div>
+                    <div class="deaths">
+                        <h2>Deaths Cases</h2>
+                        <p>New: <span class="new-deaths"></span></p>
+                        <p>Total: <span class="total-deaths"></span></p>
+                    </div>
+                    <div class="recovered">
+                        <h2>Recovered Cases</h2>
+                        <p>New: <span class="new-recovered"></span></p>
+                        <p>Total: <span class="total-recovered"></span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-
-
-
-        <!-- <section id="love-msg">
+        <section id="love-msg">
             <h3 >
                 Made with 
                 <i class="far fa-heart" ></i> 
                 from India.
             </h3>
-        </section> -->
+        </section>
     </body>
 </html>
