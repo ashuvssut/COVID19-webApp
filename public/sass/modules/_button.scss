@@ -1,10 +1,11 @@
 .hamburger{
-    background-color: $highlight;
-    box-shadow: 2px 2px 20px $black;
-    border-style: none;
-    color:$black;
+    background-color: rgba($color: #ffffff, $alpha: 0.1);
+    padding-top: 2.5px;
+    width: 45px;
+    border: solid white 1px;
+    border-radius: 5px;
+    color:rgb(235, 231, 231);
     display: none;
-    @include circular-button($white, 50px, 50px);
 }
 
 @media(max-width:920px){

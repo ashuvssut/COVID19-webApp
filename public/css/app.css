@@ -490,17 +490,13 @@ section#love-msg {
 }
 
 .hamburger {
-  background-color: #6807f9;
-  box-shadow: 2px 2px 20px #0c0c0c;
-  border-style: none;
-  color: #0c0c0c;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-top: 2.5px;
+  width: 45px;
+  border: solid white 1px;
+  border-radius: 5px;
+  color: #ebe7e7;
   display: none;
-  background-color: #f3f3f3;
-  margin: 0px 50px;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  outline: none;
 }
 
 @media (max-width: 920px) {
