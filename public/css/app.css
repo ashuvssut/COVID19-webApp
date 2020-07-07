@@ -297,6 +297,20 @@ section#results .results-container .results-headers {
   box-shadow: 0 2px 5px #0c0c0c;
   padding: 0px 5px 20px;
   border-radius: 5px;
+  background-color: yellowgreen;
+  color: blue;
+}
+
+section#results .results-container .results-headers h1 {
+  color: black;
+}
+
+section#results .results-container .results-headers h3 {
+  color: black;
+}
+
+section#results .results-container .results-headers h3 span {
+  color: blue;
 }
 
 section#results .results-container .results-body {
@@ -314,7 +328,7 @@ section#results .results-container .results-body {
 section#results .results-container .results-body .confirmed,
 section#results .results-container .results-body .deaths,
 section#results .results-container .results-body .recovered {
-  background-color: #757575;
+  background-color: #fff12a;
   padding: 10px;
   text-align: center;
   border-radius: 3px;
@@ -322,6 +336,7 @@ section#results .results-container .results-body .recovered {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: blue;
 }
 
 section#results .results-container .results-body .confirmed h2,
@@ -339,10 +354,11 @@ section#results .results-container .results-body .recovered p {
 section#results .results-container .results-body .confirmed p span,
 section#results .results-container .results-body .deaths p span,
 section#results .results-container .results-body .recovered p span {
-  color: #f3f3f3;
+  color: blue;
 }
 
 section#results .results-container .results-body .confirmed {
+  background-color: #ff9f44;
   grid-row: 1 / 3;
 }
 
@@ -368,7 +384,7 @@ section#love-msg {
     z-index: 100;
     background-color: #6807f9;
     height: 100vh;
-    width: 50%;
+    width: 65%;
     opacity: 0.85;
     transform: translateX(-500px);
     transition: transform 0.5s ease-in-out;
@@ -404,9 +420,9 @@ section#love-msg {
   line-height: 0px;
 }
 
-.navbar .logo {
+.navbar .logo-div .logo {
   width: 60px;
-  margin: 10px 10px 10px;
+  margin: 10px 5px 10px 0px;
 }
 
 .navbar .main-menu {

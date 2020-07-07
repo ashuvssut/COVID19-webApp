@@ -6,7 +6,11 @@
     padding:0 10px;
     .logo-div{
         @include flex-center();
-        line-height: 0px;       
+        line-height: 0px;   
+        .logo{
+            width:60px;
+            margin:10px 5px 10px 0px;
+        }    
     }
     // .logo-box{
     //     height: 60px;
@@ -16,10 +20,7 @@
     //     margin: 10px 10px 10px 0 ;
     //     @include flex-center();
     // }
-    .logo{
-        width:60px;
-        margin:10px 10px 10px;
-    }
+    
     
     .main-menu{
         display: flex;
