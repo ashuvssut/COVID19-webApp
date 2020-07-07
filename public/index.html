@@ -58,7 +58,19 @@
                             placeholder="Country name or Country code..." 
                             onkeyup="toggleFilter(); filterList();"
                         >
-                        <button class="search-button" type="submit">
+                        <button 
+                            class="geo-locate-button search-button" 
+                            type="submit" 
+                            title="Geolocate me!" 
+                            onclick="geoLocate();"
+                        >
+                            <i class="fas fa-map-marker-alt"></i>
+                        </button>
+                        <button 
+                            class="search-button" 
+                            type="submit" 
+                            title="Go!"
+                        >
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </button>
                     </form>

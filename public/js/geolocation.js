@@ -1,4 +1,5 @@
-if('geolocation' in navigator){  //check if geolocation is available
+function geoLocate(){
+    if('geolocation' in navigator){  //check if geolocation is available
     console.log('geolocation is available in your browser');
     
     navigator.geolocation.getCurrentPosition(async (position) => {
@@ -43,5 +44,6 @@ if('geolocation' in navigator){  //check if geolocation is available
     });
 }
 else{
-    console.log('geolocation not available');
+    alert('geolocation not available in your browser');
+}
 }
