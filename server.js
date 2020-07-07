@@ -1,8 +1,5 @@
 const express = require('express');
 const fetch = require("node-fetch");
-//const https = require('https');//to send a get req from our server to the api server
-// const bodyParser = require('body-parser'); //allows to look through the body of post requests
-// const { send } = require('process');
 
 const app = express();//initialized app as an express app
 
