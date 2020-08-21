@@ -39,4 +39,4 @@ Get regular daily updates on the pandemic across the globe.
 
 This app is hosted on Heroku!
 
-Visit the hosted website [here](https://pure-peak-41244.herokuapp.com/) ;-)
+Visit the hosted website [here](https://coronalytics-ashuvssut.herokuapp.com/) ;-)
