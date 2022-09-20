@@ -24,6 +24,6 @@
   "homepage": "https://github.com/ashuvssut/COVID19-webApp#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "node-fetch": "^3.1.1"
+    "node-fetch": "^3.2.10"
   }
 }
